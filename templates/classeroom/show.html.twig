@@ -1,0 +1,19 @@
+
+    <h1>Classeroom</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ classeroom.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ classeroom.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <a href="{{ path('update', {'id': classeroom.id}) }}">update</a>
+
+     <a href="{{ path('remove', {'id': classeroom.id}) }}">remove</a>

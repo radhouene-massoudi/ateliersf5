@@ -1,0 +1,28 @@
+
+    <h1>Student index</h1>
+
+    <table >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for student in students %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td>{{ student.name }}</td>
+                <td>
+                    <a href="{{ path('detailst', {'id': student.id}) }}">detail</a>
+                    <a href="{{ path('updatest', {'id': student.id}) }}">update</a>
+                    <a href="{{ path('deletest', {'id': student.id}) }}">delete</a>
+              
+                </td>
+            </tr>
+       
+        {% endfor %}
+        </tbody>
+    </table>
+
